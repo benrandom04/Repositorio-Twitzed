@@ -1,24 +1,26 @@
-# Etapa de construcción
+# Etapa 1: construir la app
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build
 WORKDIR /app
 
-# Copiar todos los archivos del proyecto
+# Copiamos los archivos necesarios para restaurar paquetes
+COPY WebApp/WebApp.csproj WebApp/
+COPY Data/Data.csproj Data/
+COPY Servicios/Servicios.csproj Servicios/
+COPY Modelos/Modelos.csproj Modelos/
+
+# Restauramos los paquetes
+RUN dotnet restore WebApp/WebApp.csproj
+
+# Copiamos todo
 COPY . .
 
-# Restaurar paquetes y compilar
-RUN dotnet restore
-RUN dotnet build -c Release
+# Construimos la app
+RUN dotnet publish WebApp/WebApp.csproj -c Release -o out
 
-# Publicar la app
-RUN dotnet publish -c Release -o out
-
-# Etapa final
+# Etapa 2: crear la imagen final
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
 WORKDIR /app
 COPY --from=build /app/out .
 
-# Exponer puerto
-EXPOSE 10000
-
-# Comando para ejecutar la app
+EXPOSE 5000
 ENTRYPOINT ["dotnet", "WebApp.dll"]
