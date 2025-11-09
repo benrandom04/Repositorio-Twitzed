@@ -35,7 +35,7 @@
 
     <section >
         {#if config.general.registroAbierto || codigo}
-            <h2>Para usar Rozed debes leer y aceptar las reglas</h2>
+            <h2>Para usar Twitzed debes leer y aceptar las reglas</h2>
             <h4>Tu ip esta a salvo, desde ya que si</h4>
             <h4>Preferis crear una sesion con usuario y contraseña?   <a style="color:var(--color5); text-align:center;"  href="/Registro">Registro</a></h4>
             <ErrorValidacion {error}/>

@@ -59,8 +59,8 @@
                     <span>{a.nota}</span>
                 {/if}
                 {#if a.hilo}
-                    <a href="/Hilo/{a.hilo.id}">Roz
-                        <div class="desplegable roz">
+                    <a href="/Hilo/{a.hilo.id}">Twit
+                        <div class="desplegable twit">
                             <HiloPreviewMod hilo={a.hilo}/>
                         </div>
                     </a>
@@ -116,7 +116,7 @@
         top: 15px;
         left: 20px;
     }
-    .roz {
+    .twit {
         width: 300px !important;
         height: 300px !important;
     }
