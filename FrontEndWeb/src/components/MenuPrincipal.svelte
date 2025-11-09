@@ -32,7 +32,7 @@
     <section class="menu-principal">
         <div class="menu-principal-header">
             <a href="/">
-                <h1 style="font-family: 'euroFighter';">ROZED</h1>
+                <h1 style="font-family: 'euroFighter';">TWITZED</h1>
             </a>
             {#if usuario.estaAutenticado}
             <span style="display: block;text-align: center;">Hola {usuario.userName}!</span>

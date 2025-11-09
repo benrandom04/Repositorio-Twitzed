@@ -148,7 +148,7 @@ namespace WebApp.Controllers
                     u.Id,
                     u.Creacion,
                     u.UserName,
-                    Rozs = context.Hilos.DeUsuario(id).Count(),
+                    Twits = context.Hilos.DeUsuario(id).Count(),
                     Comentarios = context.Comentarios.DeUsuario(id).Count(),
 
                 }).FirstOrDefaultAsync(u => u.Id == id),

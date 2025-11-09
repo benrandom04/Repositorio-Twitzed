@@ -210,7 +210,7 @@ export default class RChanClient {
         return axios.post(`/api/Moderacion/RemoverBan/${id}`)
     }
     
-    static restaurarRoz(id)
+    static restaurarTwit(id)
     {
         return axios.post(`/api/Moderacion/RestaurarHilo/${id}`)
     }
@@ -233,7 +233,7 @@ export default class RChanClient {
             eliminarElementos,
         })
     }
-    static limpiarRozesViejos()
+    static limpiarTwitsViejos()
     {
         return axios.post(`/api/Administracion/LimpiarRozesViejos`)
     }

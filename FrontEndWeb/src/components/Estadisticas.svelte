@@ -33,7 +33,7 @@
                 title="Computadoras conectadas">{formatear(computadorasConectadas)}</span>
             <span
                 style="right: 50%;"
-                title="Roz creados">{formatear(rozCreados)}</span>
+                title="Twit creados">{formatear(TwitCreados)}</span>
             <span
                 style="right: 32%;"
                 title="Comentarios creados">{formatear(comentariosCreados)}</span>

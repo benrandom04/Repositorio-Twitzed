@@ -443,3 +443,33 @@ $RECYCLE.BIN/
 !.vscode/launch.json
 !.vscode/extensions.json
 WebApp/wwwroot/js/bundle.js.map
+# Ignorar binarios y builds
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+*.cache
+
+# Archivos temporales
+*.log
+*.tmp
+*.user
+*.suo
+
+# Configuración local
+appsettings.json
+appsettings.Development.json
+.env
+
+# Carpetas específicas
+Data/bin/
+Data/obj/
+WebApp/bin/
+WebApp/obj/
+FrontendWeb/node_modules/
+FrontendWeb/dist/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db

@@ -31,7 +31,7 @@ export let configStore = writable({
     }
 })
 
-Signal.subscribirARozed()
+Signal.subscribirATwitzed()
 Signal.coneccion.on("configuracionActualizada", (nuevaConfig) => {
     configStore.update(c => {
         c.general = nuevaConfig

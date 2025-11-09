@@ -35,7 +35,7 @@ import { onMount, tick } from 'svelte';
 <div class="hilo-completo" r-id={hilo.id}>
 	<div class="contenido">
 		<div class="panel">
-			<a href="/">Rozed</a>
+			<a href="/">Twitzed</a>
 			<a href="/{config.categoriaPorId(hilo.categoriaId).nombreCorto}">/{config.categoriaPorId(hilo.categoriaId).nombre}</a>
 		</div>
 
@@ -46,7 +46,7 @@ import { onMount, tick } from 'svelte';
 		
 		{#if $globalStore.usuario.esMod || $globalStore.usuario.esAuxiliar}
 			{#if hilo.estado == 2 }
-				<span style="color:red">Este roz esta eliminado y pronto sera borrado</span>
+				<span style="color:red">Este twit esta eliminado y pronto sera borrado</span>
 			{/if}
 			<div class="acciones-mod panel">
 			
